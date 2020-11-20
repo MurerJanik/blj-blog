@@ -1,0 +1,47 @@
+.everything 
+{
+   background-color: white;
+   color: black;
+   font-display: Caveat;
+}
+
+.name 
+{
+   display: flex;
+   justify-content: center;
+   height: 30px;
+   margin-top: 70px;
+   
+}
+
+.textfeld 
+{
+   margin-top: 0px;
+   background-color: white;
+}
+
+.textfeld2 
+{
+   background-color: white;
+}
+
+.text
+{
+   display: flex;
+   justify-content: center;
+   margin-top: 60px;
+   margin-left: 19px;
+}
+
+.senden 
+{
+   margin-left: 610px;
+   margin-top: 20px;
+   color: black;
+   background-color:white;
+   
+}
+
+
+  
+
