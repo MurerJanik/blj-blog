@@ -1,47 +1,104 @@
-.everything 
-{
-   background-color: white;
-   color: black;
-   font-display: Caveat;
-}
+
+ body 
+ {
+    background-color: white;
+    color: black;
+    font-display: Caveat;
+ }
 
 .name 
 {
    display: flex;
-   justify-content: center;
-   height: 30px;
-   margin-top: 70px;
-   
+   /*justify-content: center;*/
+   flex-direction: column;
+   margin: 0  auto;
+   margin-top: 40px;
+   width: 30%;
+  
 }
+
 
 .textfeld 
 {
    margin-top: 0px;
-   background-color: white;
+   background-color: lightgray;
 }
 
 .textfeld2 
 {
    background-color: white;
+   background-color: lightgray;
+}
+
+.titel 
+{
+   display: flex;
+   flex-direction: column;
+  /* justify-content: center;*/
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 30%;
+
+}
+
+.textfeldtitel 
+{
+   background-color: lightgray;
 }
 
 .text
 {
    display: flex;
-   justify-content: center;
-   margin-top: 60px;
-   margin-left: 19px;
+   flex-direction: column;
+  /* justify-content: center;*/
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 50%;
 }
 
-.senden 
+.submit
 {
-   margin-left: 610px;
-   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   
    color: black;
    background-color:white;
+   margin-top: 10px;
+   
    
 }
 
+.border 
+{
+  background-color: black;
+  padding: 1px;
+  margin-top: 15px;
+}
 
+
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333;
   
+ }
+ 
+ li {
+   float: left;
+ }
+ 
+ li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+ 
+ /* Change the link color to #111 (black) on hover */
+ li a:hover {
+   background-color: #111;
+ }
 
