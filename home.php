@@ -30,8 +30,10 @@
             <li><h3>Please write in English</h3></li>
             <li><h3>Only constructive criticism</h3></li>
             <li><h3>No contributions glorifying violence</h3></li>
-            <li><h3>Do not write anything untrue.</h3></li>
-            <li><h3>Write clearly and unambiguously.</h3></li>
+            <li><h3>Do not write anything untrue</h3></li>
+            <li><h3>Write clearly and unambiguously</h3></li>
+            <li><h3>Pay attention to spelling, punctuation and grammar</h3></li>
+            <li><h3>Take note of criticism and try to implement it</h3></li>
         </ul>
     </div>
 

@@ -102,3 +102,12 @@ ul {
    background-color: #111;
  }
 
+ 
+
+
+ .posts 
+ {
+   display:flex;
+   justify-content: center;
+   margin-top: 20px;
+ }
