@@ -11,6 +11,7 @@
         <ul class="ul">
         <li class="li"><a href="/blj/blog/home.php">Home</a></li>
         <li class="li"><a class="blog_button" href="/blj/blog/blog.php">Blog</a></li>
+        <li class="li"><a href="/blj/blog/blj_liste.php">BLJ_Linkliste</a></li>
         </ul>
     </nav>
 

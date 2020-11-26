@@ -4,7 +4,12 @@
     background-color: white;
     color: black;
     font-display: Caveat;
- }
+    background-image: url('../bilder/Sternenzerstörer.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    }
 
 .name 
 {
@@ -62,7 +67,7 @@
    justify-content: center;
    
    color: black;
-   background-color:white;
+   
    margin-top: 10px;
    
    
@@ -71,7 +76,7 @@
 .border 
 {
   background-color: black;
-  padding: 1px;
+  padding: 2px;
   margin-top: 15px;
 }
 
@@ -105,9 +110,34 @@ ul {
  
 
 
- .posts 
+ .posts-wrapper
  {
    display:flex;
    justify-content: center;
    margin-top: 20px;
+ }
+
+ 
+
+ .post {
+    margin-bottom: 35px;
+    background-color: lightgray;
+    border: ridge black;
+    max-width: 500px;
+ }
+
+ .nav 
+ {
+   color: white;
+ }
+
+ .BLJ_Linkliste 
+ {
+   background-color: red;
+   padding: 22px;
+ }
+
+ .color 
+ {
+   color: white;
  }
