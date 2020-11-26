@@ -16,6 +16,7 @@
     </nav>
 
     <h1 class="titel">Liste:</h1>
+    
 <div class="list">
 <?php 
 $dbuser = "d041e_listuder";
@@ -39,6 +40,7 @@ foreach($urls as $url) {
 
    echo $link;
 } 
+
 ?>
 </div>
 
