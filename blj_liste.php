@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Links</title>
     <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
-<nav class="nav">
+    <nav class="nav">
         <ul class="ul">
-        <li class="li"><a href="/blj/blog/home.php">Home</a></li>
-        <li class="li"><a class="blog_button" href="/blj/blog/blog.php">Blog</a></li>
-        <li class="li"><a href="/blj/blog/blj_liste.php">BLJ_Linkliste</a></li>
+        <li class="li"><a href="home.php">Home</a></li>
+        <li class="li"><a class="blog_button" href="blog.php">Blog</a></li>
+        <li class="li"><a href="blj_liste.php">BLJ_Linkliste</a></li>
         </ul>
     </nav>
 
@@ -38,7 +38,7 @@ foreach ($urls as $url) {
 foreach($urls as $url) {
     $link = '<a href="' . $url["blogUrl"] . '" target="_blank">' . $url["blogAuthor"] . '\'s Blog' . '</a>' . '<br>';
 
-   echo $link;
+    echo $link;
 } 
 
 ?>

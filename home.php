@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home.php</title>
+    <title>home</title>
     <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
     <nav class="nav">
         <ul class="ul">
-        <li class="li"><a href="/blj/blog/home.php">Home</a></li>
-        <li class="li"><a class="blog_button" href="/blj/blog/blog.php">Blog</a></li>
-        <li class="li"><a href="/blj/blog/blj_liste.php">BLJ_Linkliste</a></li>
+        <li class="li"><a href="home.php">Home</a></li>
+        <li class="li"><a class="blog_button" href="blog.php">Blog</a></li>
+        <li class="li"><a href="blj_liste.php">BLJ_Linkliste</a></li>
         </ul>
     </nav>
 
@@ -37,6 +37,5 @@
             <li><h3>Take note of criticism and try to implement it</h3></li>
         </ul>
     </div>
-
 </body>
 </html>
