@@ -1,3 +1,13 @@
+
+.body 
+{
+  background-image: url('../bilder/blj.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -32,7 +42,8 @@ ul {
     margin: 0  auto;
     margin-top: 40px;
     width: 6%;
-    
+    background-color: lightgray;
+    padding: 100px;
   }
 
   .titel 
