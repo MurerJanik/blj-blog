@@ -35,6 +35,11 @@
         <label class="color" for="text">Text:</label>
         <textarea class="textfeld2" name="text" id="text" cols="40" rows="15" ></textarea>
     </div>
+
+    <div class="post_img">
+        <label class="color" for="post_img">Url:</label>
+        <textarea class="post_img" name="post_img" id="post_img" cols="40" rows="3" ></textarea>
+    </div>
     <div class="submit">
         <input  type="submit" value="Senden" />
     </div>
@@ -65,18 +70,18 @@
     $form = array(
         "name"=> "",
         "title"=> "",
-        "text"=> ""
+        "text"=> "",
+        "post_img" => ""
     );
-
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         foreach($form as $n => $value){
             $form[$n] = $_POST[$n] ?? "";
         }
-
-        $stmt = $pdo->prepare('INSERT INTO posts (created_by, post_title, post_text, created_at)
-                                VALUES (:created_by, :post_title, :post_text, now())');
-        $stmt->execute([":created_by" => "$form[name]", ":post_title" => "$form[title]", ":post_text" => "$form[text]"]);
+        $form[name]=$_POST[name];
+        $stmt = $pdo->prepare('INSERT INTO posts (created_by, post_title, post_text, created_at, post_img)
+                            VALUES (:created_by, :post_title, :post_text, now(), :post_img)');
+        $stmt->execute([":created_by" => "$form[name]", ":post_title" => "$form[title]", ":post_text" => "$form[text]", ":post_img" => "$form[post_img]"]);
     }
 ?>
 
@@ -87,15 +92,34 @@
 
 <!-- Get Posts from DB -->
 <?php
-    $stmt = $pdo->query('SELECT created_at, created_by, post_text, post_title  FROM `posts` ORDER BY created_at desc');
-    $posts = $stmt->fetchAll();     
-    foreach($posts as $post) {
-        $post[0] = htmlspecialchars($post[0]);
-        $post[1] = htmlspecialchars($post[1]);
-        $post[2] = htmlspecialchars($post[2]);
-        $post[3] = htmlspecialchars($post[3]);
-        echo "<p class=\"post\"> Name: $post[1] <br> Zeit: $post[0] <br> Titel: $post[3]  <br> Text: $post[2]  <br></p> ";      
+    $name_array = array();
+    $time_array = array();
+    $text_array = array();
+    $title_array = array();
+    $img_array = array();
+    $stmt = $pdo->query('SELECT created_by FROM `posts`');
+    foreach($stmt->fetchAll() as $nr => $x) {
+        $name_array[$nr] =  "$x[0]";
+    }  
+    $stmt = $pdo->query('SELECT created_at FROM `posts`');
+    foreach($stmt->fetchAll() as $nr => $x) {
+        $time_array[$nr] =  "$x[0]";
+    }  
+    $stmt = $pdo->query('SELECT post_text FROM `posts`');
+    foreach($stmt->fetchAll() as $nr => $x) {
+        $text_array[$nr] =  "$x[0]";
+    }  
+    $stmt = $pdo->query('SELECT post_title FROM `posts`');
+    foreach($stmt->fetchAll() as $nr => $x) {
+        $title_array[$nr] =  "$x[0]";
+    }  
+    $stmt = $pdo->query('SELECT post_img FROM `posts`');
+    foreach($stmt->fetchAll() as $nr => $x) {
+        $img_array[$nr] =  "$x[0]";
     }
+    foreach(/* bedingung */){
+        echo "<p class=\"post\"> Name: $post[1] <br> Zeit: $post[0] <br> Titel: $post[3]  <br> Text: $post[2] <br> Url: $post[4]  <br></p> ";    
+    }  
     ?>
     </div>
     
